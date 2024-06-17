@@ -29,7 +29,7 @@ class Posiciones extends Component
     }
 	
     public function calcularPuntos(){
-        $sql1 = 'SELECT id FROM pollamundialista.users';
+        $sql1 = 'SELECT id FROM users';
         $users = DB::select($sql1);
         foreach ($users as $key  ) {
          $sql2 = 'SELECT pronosticos.jugador ,jornadas.descripcion, jornadas.valor_puntaje_me,COUNT(pronosticos.jugador) AS aciertos
@@ -62,7 +62,7 @@ class Posiciones extends Component
         
         public function calcularPuntos2(){
         
-            $sql1 = 'SELECT id FROM pollamundialista.users';
+            $sql1 = 'SELECT id FROM users';
         $users = DB::select($sql1);
         foreach ($users as $key  ) {
            $sql2 = '  SELECT pronosticos.jugador ,jornadas.valor_puntaje_g,COUNT(pronosticos.jugador) AS aciertos
