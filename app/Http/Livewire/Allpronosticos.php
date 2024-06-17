@@ -27,7 +27,7 @@ class Allpronosticos extends Component
          join partidos on partidos.id = pronosticos.partido
          where partidos.estado = 1 ';
          $pronosticos = DB::select($sql);
-         return view('livewire.Allpronosticos.view', [
+         return view('livewire.allpronosticos.view', [
             'pronosticos' => $pronosticos,
         ]);
     }
