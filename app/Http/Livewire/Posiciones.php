@@ -21,10 +21,11 @@ class Posiciones extends Component
     {
         $this->calcularPuntos();
         $this->calcularPuntos2();
-
+        $this->calcularPuntosTotal();
+        
 		$keyWord = '%'.$this->keyWord .'%';
         return view('livewire.posiciones.view', [
-            'posiciones' => DB::table('users')->orderBy('puntos', 'desc')->get(),
+            'posiciones' => DB::table('users')->orderBy('total', 'desc')->get(),
         ]);
     }
 	
@@ -84,6 +85,24 @@ class Posiciones extends Component
             }      
            }
         
-	
+	 
+           public function calcularPuntosTotal(){
+        
+            $sql1 = 'SELECT id FROM users';
+        $users = DB::select($sql1);
+        foreach ($users as $key  ) {
+           $sql2 = ' SELECT id,puntos,puntos_aux  FROM users 
+             where id='.$key->id;
+       
+           $aciertos = DB::select($sql2);
+              $suma_total=0;
+              foreach ($aciertos as $key  ) {
+               $record = User::find($key->id);
+               $record->update([ 
+               'total'=>  $suma_total=$key->puntos+$key->puntos_aux
+               ]);
+              } ;
+            }      
+           }
    
 }

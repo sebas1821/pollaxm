@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('username')->unique();
             $table->integer('puntos')->nullable();
             $table->integer('puntos_aux')->nullable();
+            $table->integer('total')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

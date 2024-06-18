@@ -38,7 +38,7 @@
 							<tr>
 								<td>{{ $loop->iteration }}</td> 
 								<td>{{ $row->name }}</td> 
-								<td>{{ $row->puntos+$row->puntos_aux}}</td> 
+								<td>{{ $row->total}}</td> 
 								
 								
 							</tr>
