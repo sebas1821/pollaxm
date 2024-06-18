@@ -47,7 +47,7 @@
 						
                         @can('modulo-pronosticos')
 						<li class="nav-item">
-                            <a href="{{ url('/pronosticos') }}" class="nav-link"><i class="fa-solid fa-square-poll-vertical text-info"> </i> Mis Pronosticos</a> 
+                            <a href="{{ url('/pronosticos') }}" class="nav-link"><i class="fa-solid fa-square-poll-vertical text-info"> </i> Mis Pronósticos</a> 
                         </li>
                         @endcan
                         @can('modulo-resultados')
@@ -82,7 +82,7 @@
                         @endcan
                        
                         <li class="nav-item">
-                            <a href="{{ url('/allpronosticos') }}" class="nav-link"><i class="fa-solid fa-square-poll-horizontal text-info"></i> Pronosticos</a> 
+                            <a href="{{ url('/allpronosticos') }}" class="nav-link"><i class="fa-solid fa-square-poll-horizontal text-info"></i> Pronósticos</a> 
                         </li>
                         <li class="nav-item">
                             <a href="{{ url('/posiciones') }}" class="nav-link"><i class="fa-solid fa-ranking-star text-info"></i> Posiciones</a> 

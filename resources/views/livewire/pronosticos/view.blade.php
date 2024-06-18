@@ -7,7 +7,7 @@
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <div class="float-left">
                             <h4 class="titulop"><i class="fa-solid fa-square-poll-vertical text-info"></i>
-                                Mis Pronosticos </h4>
+                                Mis Pronósticos </h4>
                         </div>
                         @if (session()->has('message'))
                             <div wire:poll.4s class="btn btn-sm btn-success" style="margin-top:0px; margin-bottom:0px;">

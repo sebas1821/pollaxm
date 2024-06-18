@@ -20,7 +20,7 @@
               <h4 style="text-align: center"> Te invitamos a unirte a pollaxm para que disfrutes una buena experiencia compitiendo con tus amigos.</h4>
                
 			@else
-					Hola {{ Auth::user()->name }}, Bienvenido a Pollaxm.Haz tus pronósticos y demuestra que eres el mejor.
+					Hola {{Auth::user()->name}}, Bienvenido a Pollaxm.Haz tus pronósticos y demuestra que eres el mejor.
             @endif	
 				</h5>
             </div>
