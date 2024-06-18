@@ -23,7 +23,7 @@
         <ul class="list-group">
             <li class="list-group-item"> Para el cálculo de puntos se utiliza el resultado real del partido al finalizar los 90 o 120 minutos. No incluye definición por penaltis.
                </li>
-            <li class="list-group-item"> El usuario puede realizar y cambiar sus pronósticos todas las veces que desee hasta 1 minuto antes de iniciar el partido, momento en el cual el sistema no permitirá modificar el pronóstico para ese partido. Realiza los pronósticos con tiempo!.
+            <li class="list-group-item"> El usuario puede realizar y cambiar sus pronósticos todas las veces que desee hasta 15 minutos antes de iniciar el partido, momento en el cual el sistema no permitirá modificar el pronóstico para ese partido. Realiza los pronósticos con tiempo!.
       </li>
             <li class="list-group-item"> Si el jugador no realiza el pronóstico para un partido, no se sumarán puntos.</li>
             <li class="list-group-item"> Los pronósticos serán secretos hasta que comience el partido, una vez comience el partido se podrán ver los pronósticos. Esto se realiza para evitar que una persona utilice los pronósticos de otras.

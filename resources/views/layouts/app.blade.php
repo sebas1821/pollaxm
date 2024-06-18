@@ -150,10 +150,22 @@
            addModal.hide();
            editModal.hide();
         })
-        
-
+         
+    </script>
+<script>
+    Livewire.on('bloqueado', () => {
+     
+        Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'El partido ya inicio, no se puede pronosticar.',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    
+                }
+            })
+    } );
     
     </script>
-
 </body>
 </html>

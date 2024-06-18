@@ -133,12 +133,13 @@ class Pronosticos extends Component
     
     public function pronosticar($pronostico)
     {
-        // $golesLocal = $this->golesLocal;
-        // foreach ($golesLocal as $i) {
-        //    $record = EstadoPedido::where('idPedido', $i);
-          
-        // }
+    
+        $estadoPartido= DB::table('partidos')->select('estado')->join('pronosticos', 'pronosticos.partido', '=', 'partidos.id')->where('pronosticos.id',$pronostico)->pluck('estado')->first();
 
+        if($estadoPartido==1){
+        $this->dispatchBrowserEvent('closeModal');
+        $this->emit('bloqueado');
+        }else{
         $record = Pronostico::findOrFail($pronostico);
         if($this->golesLocal > $this->golesVisitante){
             $ganador= Partido::select("nombre_equipo")->join('equipos', 'equipos.id', '=', 'partidos.idEquipoLocal')->where('partidos.id',$record->partido)->pluck('nombre_equipo')->first();
@@ -166,5 +167,5 @@ class Pronosticos extends Component
 		$this->dispatchBrowserEvent('closeModal');
 		session()->flash('message', 'Pronóstico con éxito.');
         }
-
+    }
 }
